@@ -1,0 +1,121 @@
+COMANDOS
+
+//inicia servicios
+sudo service docker start	
+//o tambien
+sudo systemctl start docker
+
+//verificar que corre:
+sudo systemctl status docker
+
+//ejemplo
+sudo docker run hello-world
+
+
+docker search centos			//para buscar centos, tiene q haber servicio activado
+
+//When searching for an image to run a container, always use one with OK in the OFFICIAL column.
+
+exit							//sale del container
+docker --version 				//version 
+
+//-it: para una consola interactiva q meta todo dentro del contenedor,
+//bash: la consola.
+docker run -it ubuntu bash		
+
+//la imagen siempre va al final
+//se le coloco un nombre: "--name webserver"
+//-d indica que se ejecuta en segundo plano.
+//
+docker run -d -p 80:81 --name webserver nginx
+
+//por tanto en un navegador si coloco: 127.0.0.1:81
+
+//para ver los contenedores que se ejecutan en segundo plano
+docker ps
+
+//para parar la ejecucion de algunn contenedor:
+docker stop <<nombre contenedor>>
+
+//RECOMIENDAN QUE METAMOS UN NUNICO SERVICIO 
+
+
+//sudo del cliente de la línea de comandos de Docker:
+sudo docker [opción] [comando] [argumentos]
+
+//docker file: https://www.digitalocean.com/community/tutorials/docker-explicado-como-crear-contenedores-de-docker-corriendo-en-memcached-es
+
+////EXPOSE 80 , en la imagen de dockerfile es el puerto para apache
+
+//volumen:datos y configuracion 
+//registro son practicamente biblioteca de imagenes de contenedores lista para usar.
+
+
+//informacion del docker
+docker info
+
+docker images
+
+//crear un contenedor
+# docker run IMAGEN COMANDO_INICIAL
+//ejm
+# docker run -i -t debian /bin/bash
+
+//para guardar la configuracion antes de cerrarlo
+# docker commit ID_CONTENEDOR NOMBRE_IMAGEN
+
+//para borrar
+
+
+
+//como docker solo funciona en root podemos hace rlo siguiente:
+sudo usermod -aG docker gilberth89+
+
+
+
+========instalacion del centos==========
+sudo docker run centos
+ //o
+docker search centos
+docker pull centos
+docker run centos
+
+//metiendo todo en un container con -i y -t
+docker run -it centos
+
+//por tanto el command prompt cambia indicando que ahora estoy dentro de un contenedor.
+//id container: 1bcda7650902 
+//ahora puedo instalar cualquier cosa dentro de los container.
+
+
+//para salvar estado de un container como un nueva imagen , primero: 
+exit
+
+//sintaxis
+docker commit -m "What did you do to the image" -a "Author Name" container-id repository/new_image_name
+
+//ejemplo
+docker commit -m "added mariadb-server" -a "Sunday Ogwu-Chinuwa" 59839a1b7de2 finid/centos-mariadb
+
+//docker images, para ver las imagenes.
+
+
+//para ver container activos 
+docker ps
+
+//ultimo container creado
+docker ps -l
+
+
+
+
+
+//https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-centos-7
+
+
+//para correr una imagen guardada(contenedor)
+docker run -it -d <<id>> bin/bash
+
+
+
+

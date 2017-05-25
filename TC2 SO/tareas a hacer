@@ -1,0 +1,82 @@
+
+COMUNICACION
+ + comunicacion creo q es por solo contenedores. Nosotros elegimos nuestro puerto.
+
+ALGORITMO DE ENCRIPTACION (biblioteca)
+ + encriptar con rsa
+ + desencriptar con rsa
+
+CENTOS7
+ + crear imagen con centos 7 
+
+DOCUMENTACION 
+ + conceptos
+ + guia de la forma en que corre la imagen.
+
+IP PARTICIPANTES
+ + almacenar las ips de los participantes. (comando para obtener ips en linux)
+
+MENSAJES
+ +  mensaje.txt mensaje que se va a agregar. 
+
+
+APP IN DOCKER
++ entonces al mae le llegan requests
++ si le llega una request de una IP que está en el archivo trusted_hosts.txt
+el mae agarra la(s) palabra(s) que recibió, 
+	+ y si la palabra que tiene en su archivo NO es "fin" concatena la palabra en palabra.txt al mensaje que recibió, 
+	+ y envía el mensaje a la IP que sigue en el archivo trusted_hosts.txt
+	+ pero si "fin" está en palabra.txt entonces el mae escribe lo que recibió un archivo "mensaje.txt" y termina
+
+Entonces, el programa, que le voy a decir "t2-daemon"
+	- va a estar corriendo en cada compu (para recibir)
+	- el mae está esperando a que le lleguen mensajes
+		-- si al mae le llega un mensaje, hay dos posibilidades
+		-- sea de una IP en trusted_hosts.txt (*)
+			--- entonces envia (se convierte emisor)
+
+		-- no sea de una IP en trusted_hosts.txt (**)
+
+	(*) -> pasa lo que describí antes
+	(**) -> t2-daemon no acepta la conexión
+
+
+PREGUNTAS
++ Para la ip, se usa un archivo con la ip propia.(aparte del config)
+
+
+
+
+	=========TIPS=========
+	Con add subo el ejecutable
+	Y con -v el directorio cuando se manda el run
+
+
+docker run
+luego montar un volumen!
+
+1 contenedor se crea apartir d una imagen 
+la imagen es de centus!!
+dos formas de crear imagnes:
+	
+el dockerfile es un archivito normal, donde la primer linea es la base.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
