@@ -21,10 +21,11 @@ def encriptar():
 		print("\nLa llave publica es: ",public_key)
 		
 
-		msjAencriptar = input("\nDigite msj a encriptar: ");
+		msjAencriptar = input("\nDigite msj a encriptar: ")
 		#encriptando
 		msjEncriptado = public_key.encrypt(msjAencriptar.encode(), 32)
-		print("\nEncriptado: \n", msjEncriptado)
+		print("\nEncriptado:")
+		print(msjEncriptado)
 	else:
 		msjEncriptado = "No se puede encriptar"	
 	return msjEncriptado
