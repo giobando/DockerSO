@@ -43,4 +43,10 @@ while 1:
   #encmessage is the cipher text
   encmessage = pickle.loads(rcstring)
  
-  print RSAKey.decrypt(encmessage)
+  desencriptado = RSAKey.decrypt(encmessage)
+  print desencriptado
+
+  # if(encmessage=="fin"):
+  f=open("mensaje.txt","a")
+  f.write(desencriptado+" ")
+  f.close()
