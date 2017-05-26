@@ -1,23 +1,28 @@
+ + instalar python dentro de centus
+ + tomar las ip's de un archivo .conf (al final)
 
 COMUNICACION
  + comunicacion creo q es por solo contenedores. Nosotros elegimos nuestro puerto.
+ + modificar la aplicacion para que pueda enviar y recibir con la misma aplicacion!
+ + verificar si la ip q se encuentra sobre la ip del container corresponde al que hace la solicitud
+   para recibir y envia al siguiente en teoria!
 
 ALGORITMO DE ENCRIPTACION (biblioteca)
- + encriptar con rsa
- + desencriptar con rsa
+ - encriptar con rsa
+ - desencriptar con rsa
 
 CENTOS7
  + crear imagen con centos 7 
 
 DOCUMENTACION 
- + conceptos
+ - conceptos
  + guia de la forma en que corre la imagen.
 
 IP PARTICIPANTES
  + almacenar las ips de los participantes. (comando para obtener ips en linux)
 
 MENSAJES
- +  mensaje.txt mensaje que se va a agregar. 
+ +  mensaje.txt mensaje que se va a agregar (guardarlo por volumen en "carpetaDocker/"). 
 
 
 APP IN DOCKER
@@ -62,7 +67,7 @@ dos formas de crear imagnes:
 el dockerfile es un archivito normal, donde la primer linea es la base.
 
 
-
+==========================Pasos===============================
 
 
 

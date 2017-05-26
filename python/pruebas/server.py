@@ -1,5 +1,5 @@
 #----servidor------
-//http://mundogeek.net/archivos/2008/04/12/sockets-en-python/
+#//http://mundogeek.net/archivos/2008/04/12/sockets-en-python/
 import socket  
   
 s = socket.socket()   

@@ -1,5 +1,10 @@
 #!/usr/bin/env python
  
+ #Este codigo basicamente espera en recibir una solicitud la cual consiste
+ #en un palabra encriptada
+ #Si la palabra es "fin" almacena dicha palabra en un archivo mensaje.txt
+ #Si no, entonces responde y la envia nuevamente encriptada.
+ 
 from Crypto.Hash import MD5
 from Crypto.PublicKey import RSA
 from Crypto.Util import randpool
