@@ -24,7 +24,11 @@ publickey = pickle.loads(rcstring)
 print publickey
  
 #encrypt the top secret data
-secretText = publickey.encrypt("Hello, this is Rich.", 32)
+msg = input("digite el msj a encriptar(entre comillas):")
+
+secretText = publickey.encrypt(msg, 32)
+print("encriptado: ",secretText)
+
  
 s.sendall(pickle.dumps(secretText))
 s.close()
