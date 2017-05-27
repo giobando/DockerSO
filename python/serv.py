@@ -4,7 +4,7 @@
  #en un palabra encriptada
  #Si la palabra es "fin" almacena dicha palabra en un archivo mensaje.txt
  #Si no, entonces responde y la envia nuevamente encriptada.
- 
+
 from Crypto.Hash import MD5
 from Crypto.PublicKey import RSA
 from Crypto.Util import randpool
@@ -42,16 +42,24 @@ while 1:
     rcstring += buf
     if not len(buf):
       break
-  clientsock.close()
-  #done with the network stuff, at least for this connection
+
  
-  #encmessage is the cipher text
-  encmessage = pickle.loads(rcstring)
- 
+  #Mensaje encriptado
+  encmessage = pickle.loads(rcstring) 
   desencriptado = RSAKey.decrypt(encmessage)
+
   print desencriptado
 
-  # if(encmessage=="fin"):
+  #----Agrega palabra al txt-----------
   f=open("mensaje.txt","a")
   f.write(desencriptado+" ")
   f.close()
+
+  #----Verifica si termina conexion----
+  if(encmessage=="fin"):
+	  print("Fin recibido!")
+  else:
+  	clientsock.send()
+  
+  clientsock.close()
+  

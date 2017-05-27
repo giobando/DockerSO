@@ -19,8 +19,9 @@ docker search centos			//para buscar centos, tiene q haber servicio activado
 exit							//sale del container
 docker --version 				//version 
 
+
 //-it: para una consola interactiva q meta todo dentro del contenedor,
-//bash: la consola.
+//bash: la consola, ejm:
 docker run -it ubuntu bash		
 
 //la imagen siempre va al final
@@ -65,7 +66,16 @@ docker images
 # docker commit ID_CONTENEDOR NOMBRE_IMAGEN
 
 //para borrar
+//localizamos el id (en este caso imagenes)
+	docker images -a
+//borramos 
+	docker rmi  <IMAGE ID>
 
+//borrar container
+//primero id
+	docker ps -a
+//borramos
+	docker rm  <CONTAINER ID>
 
 
 //como docker solo funciona en root podemos hace rlo siguiente:

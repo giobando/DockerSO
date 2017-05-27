@@ -1,7 +1,11 @@
  + instalar python dentro de centus
  + tomar las ip's de un archivo .conf (al final)
+ + usar dockerfile: https://www.digitalocean.com/community/tutorials/docker-explicado-como-crear-contenedores-de-docker-corriendo-en-memcached-es
+
+ + montar un volumen(se ocupa contenedor)
 
 COMUNICACION
+ - por sockets (el codigo se llama serv.py clie.py) 
  + comunicacion creo q es por solo contenedores. Nosotros elegimos nuestro puerto.
  + modificar la aplicacion para que pueda enviar y recibir con la misma aplicacion!
  + verificar si la ip q se encuentra sobre la ip del container corresponde al que hace la solicitud
@@ -44,12 +48,6 @@ Entonces, el programa, que le voy a decir "t2-daemon"
 
 	(*) -> pasa lo que describí antes
 	(**) -> t2-daemon no acepta la conexión
-
-
-PREGUNTAS
-+ Para la ip, se usa un archivo con la ip propia.(aparte del config)
-
-
 
 
 	=========TIPS=========
