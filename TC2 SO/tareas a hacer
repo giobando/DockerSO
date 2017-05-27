@@ -1,6 +1,6 @@
  + instalar python dentro de centus
  + tomar las ip's de un archivo .conf (al final)
- + usar dockerfile: https://www.digitalocean.com/community/tutorials/docker-explicado-como-crear-contenedores-de-docker-corriendo-en-memcached-es
+ - usar dockerfile: https://www.digitalocean.com/community/tutorials/docker-explicado-como-crear-contenedores-de-docker-corriendo-en-memcached-es
 
  + montar un volumen(se ocupa contenedor)
 
@@ -16,7 +16,7 @@ ALGORITMO DE ENCRIPTACION (biblioteca)
  - desencriptar con rsa
 
 CENTOS7
- + crear imagen con centos 7 
+ - crear imagen con centos 7 
 
 DOCUMENTACION 
  - conceptos

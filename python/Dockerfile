@@ -1,7 +1,7 @@
 FROM centos
 MAINTAINER gilberth
 
-RUN apt-get update
 
-
-
+RUN yum -y update; yum clean all
+RUN yum -y install epel-release; yum clean all
+RUN yum -y install python-pip; yum clean all

@@ -13,11 +13,7 @@ el rendimiento de las aplicaciones .
 	sudo service docker start
 
 4. creamos un dockerfile (ya creado en la carpeta python)
-	FROM centos
-	MAINTAINER gilberth
 
-	RUN apt-get update
-	
 
 5. se crea la siguiente imagen etiquetada como centos_img .
 	sudo docker build -t centos_img .
@@ -32,6 +28,10 @@ el rendimiento de las aplicaciones .
 	sudo apt-get update && sudo apt-get -y upgrade
 	sudo apt-get install -y python-pip
 	pip install python-memcached
+
+8. creamos un contenedor con lo anterior mas un volumen asociado
+	sudo docker run -name contenedorA -d -p 45001:11211 centos_img -v /carpetaDocker:/carpetaDocker
+
 
 
 
